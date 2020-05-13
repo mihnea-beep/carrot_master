@@ -311,7 +311,7 @@ void Level2::loadRes(SDL_Renderer* Renderer)
     if(!score_set)
       {
   		gameScore.setColor(0, 0, 100);
-  		gameScore.setText("Score: 0", "ChunkFive-Regular.otf", 24, Renderer);
+  		gameScore.setText("Score: 0", "Assets/ChunkFive-Regular.otf", 24, Renderer);
   		score_set = true;
   	}
 
