@@ -73,7 +73,7 @@ void Game::Init()
     if(!bg_set)
 
     {
-      bg.setImage("grass_3.png", Renderer);
+      bg.setImage("Assets/grass_3.png", Renderer);
       bg.setPos(0, 0);
       bg_set = true;
     }
@@ -82,21 +82,21 @@ void Game::Init()
 
     {
         //MC.randSpawn();
-        MC.setImage("bunny0.png", Renderer, 1);
+        MC.setImage("Assets/bunny0.png", Renderer, 1);
         MC.randSpawn();
-        guard.setImage("heart1.png", Renderer);
+        guard.setImage("Assets/heart1.png", Renderer);
         guard.randSpawn();
-        rabbit.setImage("bunny0.png", Renderer, 1);
+        rabbit.setImage("Assets/bunny0.png", Renderer, 1);
         rabbit.randSpawn();
-        chaser.setImage("bunny0.png", Renderer);
+        chaser.setImage("Assets/bunny0.png", Renderer);
         chaser.randSpawn();
 
-        bullet.setImage("bullets/m2b0.png", Renderer);
+        bullet.setImage("Assets/bullets/m2b0.png", Renderer);
         bullet.setPos(MC.getX(), MC.getY());
         //launched = false;
         isAlive = false;
 
-        chs1.setImage("bunny0.png", Renderer, 1);
+        chs1.setImage("Assets/bunny0.png", Renderer, 1);
         chs1.randSpawn();
 
         guard.setLife(true);
@@ -107,7 +107,7 @@ void Game::Init()
 
 
 
-        //chs2.setImage("bunny0.png", Renderer, 1);
+        //chs2.setImage("Assets/bunny0.png", Renderer, 1);
         //chs2.randSpawn();
         //chs3.setImage("bunny0.png", Renderer, 1);
         //()chs3.randSpawn();
@@ -136,7 +136,7 @@ void Game::Init()
 	if(!score_set)
     {
 		gameScore.setColor(0, 0, 100);
-		gameScore.setText("Score: 0", "ChunkFive-Regular.otf", 24, Renderer);
+		gameScore.setText("Score: 0", "Assets/ChunkFive-Regular.otf", 24, Renderer);
 		score_set = true;
 	}
 
@@ -168,7 +168,7 @@ void Game::loop()
 
         delay = 33 - (timer_end - timer_begin);
        // if(delay > 33)
-         //   delay = 0;
+         //   delay = 0; 
        // else delay = delay;
         delay = delay > 33 ? 0 : delay;
         SDL_Delay(delay);
@@ -812,9 +812,9 @@ void Game::menuInit()
 	if(!title_set)
 	{
 		welcomef.setColor(100, 100, 0);
-		welcomef.setText("Carrot Master v0.49", "ChunkFive-Regular.otf", 34, Renderer);
+		welcomef.setText("Carrot Master v0.49", "Assets/ChunkFive-Regular.otf", 34, Renderer);
 		welcome.setColor(255, 255, 255);
-		welcome.setText("Carrot Master v0.49", "ChunkFive-Regular.otf", 34, Renderer);
+		welcome.setText("Carrot Master v0.49", "Assets/ChunkFive-Regular.otf", 34, Renderer);
 
 
 		title_set = true;
@@ -1415,9 +1415,9 @@ void Game::resetInput() // not great
 void Game::animate(Player& p)
 {
     vector<string> frames(3); //amount of frames can be set in player?
-    frames[0] = "bunny1.png";
-    frames[1] = "bunny2.png";
-    frames[2] = "bunny3.png";
+    frames[0] = res_path + "bunny1.png";
+    frames[1] = res_path + "bunny2.png";
+    frames[2] = res_path + "bunny3.png";
 
 
     p.setImage(frames[(tick/5) % 3], Renderer);
@@ -1428,7 +1428,7 @@ void Game::animate(Player& p, int frames_no, string frame_name)
     vector<string> frames(frames_no); //amount of frames can be set in player?
 
     for(int i = 0; i < frames_no; i++)
-        frames[i] = frame_name + patch::to_string(i) + ".png";
+        frames[i] = res_path + frame_name + patch::to_string(i) + ".png";
 
 
     p.setImage(frames[(tick/5) % frames_no], Renderer);
@@ -1437,10 +1437,10 @@ void Game::animate(Player& p, int frames_no, string frame_name)
 void Game::animateGuard(Player& p) // pass the object, the number of frames and read them with
 {                                  // standard format: string "obj_name" + patch::to_str(i);
     vector<string> frames(4); //amount of frames can be set in guard?
-    frames[0] = "heart1.png";
-    frames[1] = "heart2.png";
-    frames[2] = "heart3.png";
-    frames[3] = "heart4.png";
+    frames[0] = res_path + "heart1.png";
+    frames[1] = res_path + "heart2.png";
+    frames[2] = res_path + "heart3.png";
+    frames[3] = res_path + "heart4.png";
 
 
     p.setImage(frames[(tick/5) % 3], Renderer);
@@ -1614,7 +1614,7 @@ void Game::optionsMenuInit()
 	//	welcomef.setColor(100, 100, 0);
 		//welcomef.setText("Options", "ChunkFive-Regular.otf", 34, Renderer);
 		options_1.setColor(255, 255, 255);
-		options_1.setText("Options", "ChunkFive-Regular.otf", 34, Renderer);
+		options_1.setText("Options", "Assets/ChunkFive-Regular.otf", 34, Renderer);
 
     options_title_set = true;
 

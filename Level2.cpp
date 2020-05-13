@@ -166,7 +166,7 @@ void Level2::animate(Player& p, int frames_no, string frame_name,
     vector<string> frames(frames_no); //amount of frames can be set in player?
 
     for(int i = 0; i < frames_no; i++)
-        frames[i] = frame_name + patch::to_string(i) + ".png";
+        frames[i] = res_path + frame_name + patch::to_string(i) + ".png";
 
 
     p.setImage(frames[(tick/5) % (frames_no)], Renderer); // /10
@@ -252,18 +252,18 @@ void Level2::loadRes(SDL_Renderer* Renderer)
 
     if(!bg_set)
     { //l = r = d = u = 0;
-      bg.setImage("space.png", Renderer);
+      bg.setImage("Assets/space.png", Renderer);
       if(bg.getTexture() == NULL)
         cout<<"yep";
       bg.setPos(0, 0);
       bg_set = true;
       //if(bg.getTexture() == NULL)
-      MC.setImage("bunny_u0.png", Renderer, 1);
+      MC.setImage("Assets/bunny_u0.png", Renderer, 1);
       //if(MC.getTexture() == NULL)
         //cout<<"AAA";
       MC.randSpawn();
       MC.setLife(true);
-      bullet.setImage("bullets/m2b0.png", Renderer);
+      bullet.setImage("Assets/bullets/m2b0.png", Renderer);
       //if(bullet.getTexture() == NULL)
         //cout<<"nope";
       bullet.setPos(MC.getX(), MC.getY());

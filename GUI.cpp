@@ -54,7 +54,7 @@ int GUI::getH()
 void GUI::setMsg(string msgtext, SDL_Renderer* render)
 {
     BoxText.setColor(getColor().r, getColor().g, getColor().b);
-    BoxText.setText(msgtext.c_str(), "ChunkFive-Regular.otf", 24, render);
+    BoxText.setText(msgtext.c_str(), "Assets/ChunkFive-Regular.otf", 24, render);
    // BoxText.display(getX(), getY(), getW(), getH(), render);
 
 }

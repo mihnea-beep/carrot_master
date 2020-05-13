@@ -100,7 +100,7 @@ void Level3::animate(Player& p, int frames_no, string frame_name,
     vector<string> frames(frames_no); //amount of frames can be set in player?
 
     for(int i = 0; i < frames_no; i++)
-        frames[i] = frame_name + patch::to_string(i) + ".png";
+        frames[i] = res_path + frame_name + patch::to_string(i) + ".png";
 
 
     p.setImage(frames[(tick/5) % frames_no], Renderer); // /10
@@ -158,10 +158,10 @@ void Level3::loadRes(SDL_Renderer* Renderer)
   Init(Renderer);
 
     if(!bg_set)
-    { bg.setImage("grass_3.png", Renderer);
+    { bg.setImage("Assets/grass_3.png", Renderer);
       bg.setPos(0, 0);
       bg_set = true;
-      MC.setImage("bunny0.png", Renderer, 1);
+      MC.setImage("Assets/bunny0.png", Renderer, 1);
       MC.randSpawn();
       MC.setLife(true);
       timer1 = SDL_GetTicks();
@@ -176,7 +176,7 @@ void Level3::loadRes(SDL_Renderer* Renderer)
     if(!score_set)
       {
   		gameScore.setColor(0, 0, 100);
-  		gameScore.setText("Score: 0", "ChunkFive-Regular.otf", 24, Renderer);
+  		gameScore.setText("Score: 0", "Assets/ChunkFive-Regular.otf", 24, Renderer);
   		score_set = true;
   	}
     /*
