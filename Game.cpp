@@ -792,7 +792,7 @@ void Game::menuInit()
 
 	if(!cursor_init) // this could go in the constructor
     {
-        cursor_surface = SDL_LoadBMP("cursor.carrotz");
+        cursor_surface = SDL_LoadBMP("Assets/cursor.carrotz");
 
         if(cursor_surface == NULL )
             cout<<"error!";
