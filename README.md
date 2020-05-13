@@ -1,8 +1,9 @@
 # carrot_master
 
-2D top-down shooter (C++ and SDL2)
+<b>2D top-down shooter (C++ and SDL2)</b>
 
 Disclaimer: This is a demo. There are currently 3 levels and 2 of them are playable, although quite short.
+
 
 Known issues: 
 
