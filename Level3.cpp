@@ -248,22 +248,24 @@ void Level3::render(SDL_Renderer* Renderer)
 //    if( (vec[i].x <= mx + 100) || (vec[i].x >= mx - 100) )
     //  if( (vec[i].y <= my + 100) || (vec[i].y >= my - 100) )
     float  dist = sqrt((vec[i].x - mx)*(vec[i].x - mx) + (vec[i].y - my) *(vec[i].y - my));
-      if(dist <= 100)
-      {
-        vec[i].x += 10;//rand() % 600;
-        vec[i].y -= 10;// rand() % 400;
-      }
+      // if(dist <= 100)
+      // {
+        // vec[i].x += 10;//rand() % 600;
+        // vec[i].y -= 10;// rand() % 400;
+      // }
 
 
     //  if(vec[i].x >= vec[i-1].x)
-      //  vec[i].x += 10;
+        vec[i].x = rand() % 640;
       //if(vec[i].y == vec[i-1].y)
-        //vec[i].y -= 10;
+        vec[i].y = rand() % 480;
+
         if(dist <= 100)
           {
-            vec[i].x += 10;
-            vec[i].y -= 10;
+            vec[i].x = rand() % 600;//+= 10;
+            vec[i].y = rand() % 400;//-= 10;
           }
+
         SDL_RenderDrawPoint(Renderer, vec[i].x, vec[i].y);
 
         //SDL_RenderDrawPoints(Renderer, vec, 10000);
