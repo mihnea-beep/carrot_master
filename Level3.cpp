@@ -32,34 +32,44 @@ void Level3::movePlayer(Player& p, SDL_Renderer* Renderer)
 {
   if(l)   //Movement
   {
-      p.setX(p.getX()-speed);
+      // p.setX(p.getX()-speed);
       animate(p, 3, "bunny", Renderer);
       //last_pressed = l;
       //l = 0;
+      bg.setX(bg.getX() + speed);
+
   }
   if(r)
   {
-      p.setX(p.getX()+speed);
+      //p.setX(p.getX()+speed);
       animate(p, 3, "bunny_r", Renderer);
       //r = 0;
       //last_pressed = r;
+      bg.setX(bg.getX() - speed);
+
   }
   if(u)
   {
-      p.setY(p.getY()-speed);
+      // p.setY(p.getY()-speed);
 
       animate(p, 3, "bunny_u", Renderer);
       //last_pressed = u;
       //u = 0;
+      bg.setY(bg.getY() + speed);
+
   }
   if(d)
   {
-      p.setY(p.getY()+speed);
+      // p.setY(p.getY()+speed);
 
       animate(p, 3, "bunny_d", Renderer);
       //last_pressed = d;
       //d = 0;
+      bg.setY(bg.getY() - speed);
+
   }
+
+  
 }
 
 void Level3::update(SDL_Renderer* Renderer)
@@ -162,7 +172,8 @@ void Level3::loadRes(SDL_Renderer* Renderer)
       bg.setPos(0, 0);
       bg_set = true;
       MC.setImage("Assets/bunny0.png", Renderer, 1);
-      MC.randSpawn();
+      //MC.randSpawn();
+      MC.setPos(320, 240);
       MC.setLife(true);
       timer1 = SDL_GetTicks();
       vec = new SDL_Point[10000];
