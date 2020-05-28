@@ -20,13 +20,16 @@ Assets: https://opengameart.org/
 
 **Known issues**: 
 
-The return button in the 'Options' menu doesn't work. You can use the 'Esc' key
+The return button in the 'Options' menu doesn't work. You can use the 'Esc' key to go back.
 
+**Instructions**:
+
+Use the w, a, s, d keys or the arrow keys to move and the spacebar to shoot.
 
 **Walkthrough**:
 
 Level 1: eliminate the other bunnies and pick up the heart before they respawn.
 
-Level 2: eliminate all the bunnies.
+Level 2: eliminate all the bunnies. 
 
 Level 3: -
