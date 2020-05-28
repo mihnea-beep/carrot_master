@@ -1,8 +1,11 @@
-# carrot_master
+p# carrot_master
 
 <b>2D top-down shooter (C++ and SDL2)</b>
 
-**Disclaimer**: This is a demo. There are currently 3 levels and 2 of them are playable, although quite short.
+Simple DirectMedia Layer: https://www.libsdl.org/
+Assets: https://opengameart.org/
+
+**Disclaimer**: This is a demo. There are currently 3 levels and 2 of them are playable, although they are quite short.
 
 **Screenshots**
 
